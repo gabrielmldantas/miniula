@@ -1,0 +1,61 @@
+Quartus II
+Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Full Version
+14
+1076
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+miniula
+# storage
+db|miniula.(0).cnf
+db|miniula.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+miniula.vhd
+e13de4e9e382b48f38762e3e721bb90
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# include_file {
+arith.vhd
+e269b5ba05692b1b41fa8ebe4625450
+logic.vhd
+eded35171446f55639848965f5af8ac6
+util.vhd
+6cf56f98a6b9a9eda05f7416b8a869f
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# complete
+

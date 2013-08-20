@@ -1,0 +1,605 @@
+Simulator report for miniula
+Tue Aug 20 14:44:44 2013
+Quartus II Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2011 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 100.0 ns     ;
+; Simulation Netlist Size     ; 405 nodes    ;
+; Simulation Coverage         ;      90.12 % ;
+; Total Number of Transitions ; 2694         ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
++-----------------------------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                                              ;
++--------------------------------------------------------------------------------------------+----------------------------------------------------+---------------+
+; Option                                                                                     ; Setting                                            ; Default Value ;
++--------------------------------------------------------------------------------------------+----------------------------------------------------+---------------+
+; Simulation mode                                                                            ; Functional                                         ; Timing        ;
+; Start time                                                                                 ; 0 ns                                               ; 0 ns          ;
+; Simulation results format                                                                  ; VWF                                                ;               ;
+; Vector input source                                                                        ; C:/Users/labhw.DCOMP/Desktop/miniula/Waveform2.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                                                 ; On            ;
+; Check outputs                                                                              ; Off                                                ; Off           ;
+; Report simulation coverage                                                                 ; On                                                 ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                                                 ; On            ;
+; Display missing 1-value coverage report                                                    ; On                                                 ; On            ;
+; Display missing 0-value coverage report                                                    ; On                                                 ; On            ;
+; Detect setup and hold time violations                                                      ; Off                                                ; Off           ;
+; Detect glitches                                                                            ; Off                                                ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                                                ; Off           ;
+; Generate Signal Activity File                                                              ; Off                                                ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                                                ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                                                ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                                                 ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                                         ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                                                ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off                                                ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                                               ; Auto          ;
++--------------------------------------------------------------------------------------------+----------------------------------------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      90.12 % ;
+; Total nodes checked                                 ; 405          ;
+; Total output ports checked                          ; 405          ;
+; Total output ports with complete 1/0-value coverage ; 365          ;
+; Total output ports with no 1/0-value coverage       ; 38           ;
+; Total output ports with no 1-value coverage         ; 39           ;
+; Total output ports with no 0-value coverage         ; 39           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                ;
++--------------------+--------------------+------------------+
+; Node Name          ; Output Port Name   ; Output Port Type ;
++--------------------+--------------------+------------------+
+; |miniula|result~0  ; |miniula|result~0  ; out0             ;
+; |miniula|vaium~0   ; |miniula|vaium~0   ; out0             ;
+; |miniula|result~1  ; |miniula|result~1  ; out0             ;
+; |miniula|vaium~1   ; |miniula|vaium~1   ; out0             ;
+; |miniula|vaium~2   ; |miniula|vaium~2   ; out0             ;
+; |miniula|vaium~3   ; |miniula|vaium~3   ; out0             ;
+; |miniula|vaium~4   ; |miniula|vaium~4   ; out0             ;
+; |miniula|result~2  ; |miniula|result~2  ; out0             ;
+; |miniula|vaium~7   ; |miniula|vaium~7   ; out0             ;
+; |miniula|vaium~8   ; |miniula|vaium~8   ; out0             ;
+; |miniula|vaium~9   ; |miniula|vaium~9   ; out0             ;
+; |miniula|vaium~10  ; |miniula|vaium~10  ; out0             ;
+; |miniula|result~3  ; |miniula|result~3  ; out0             ;
+; |miniula|vaium~11  ; |miniula|vaium~11  ; out0             ;
+; |miniula|vaium~12  ; |miniula|vaium~12  ; out0             ;
+; |miniula|vaium~13  ; |miniula|vaium~13  ; out0             ;
+; |miniula|vaium~14  ; |miniula|vaium~14  ; out0             ;
+; |miniula|vaium~15  ; |miniula|vaium~15  ; out0             ;
+; |miniula|result~4  ; |miniula|result~4  ; out0             ;
+; |miniula|vaium~16  ; |miniula|vaium~16  ; out0             ;
+; |miniula|vaium~17  ; |miniula|vaium~17  ; out0             ;
+; |miniula|vaium~18  ; |miniula|vaium~18  ; out0             ;
+; |miniula|vaium~19  ; |miniula|vaium~19  ; out0             ;
+; |miniula|vaium~20  ; |miniula|vaium~20  ; out0             ;
+; |miniula|result~5  ; |miniula|result~5  ; out0             ;
+; |miniula|vaium~21  ; |miniula|vaium~21  ; out0             ;
+; |miniula|vaium~22  ; |miniula|vaium~22  ; out0             ;
+; |miniula|vaium~23  ; |miniula|vaium~23  ; out0             ;
+; |miniula|vaium~24  ; |miniula|vaium~24  ; out0             ;
+; |miniula|result~6  ; |miniula|result~6  ; out0             ;
+; |miniula|vr~6      ; |miniula|vr~6      ; out              ;
+; |miniula|result~7  ; |miniula|result~7  ; out0             ;
+; |miniula|vaium~26  ; |miniula|vaium~26  ; out0             ;
+; |miniula|result~8  ; |miniula|result~8  ; out0             ;
+; |miniula|result~9  ; |miniula|result~9  ; out0             ;
+; |miniula|vaium~27  ; |miniula|vaium~27  ; out0             ;
+; |miniula|vaium~28  ; |miniula|vaium~28  ; out0             ;
+; |miniula|vaium~29  ; |miniula|vaium~29  ; out0             ;
+; |miniula|vaium~30  ; |miniula|vaium~30  ; out0             ;
+; |miniula|vaium~31  ; |miniula|vaium~31  ; out0             ;
+; |miniula|result~10 ; |miniula|result~10 ; out0             ;
+; |miniula|result~11 ; |miniula|result~11 ; out0             ;
+; |miniula|vaium~32  ; |miniula|vaium~32  ; out0             ;
+; |miniula|vaium~33  ; |miniula|vaium~33  ; out0             ;
+; |miniula|vaium~34  ; |miniula|vaium~34  ; out0             ;
+; |miniula|vaium~35  ; |miniula|vaium~35  ; out0             ;
+; |miniula|vaium~36  ; |miniula|vaium~36  ; out0             ;
+; |miniula|result~12 ; |miniula|result~12 ; out0             ;
+; |miniula|result~13 ; |miniula|result~13 ; out0             ;
+; |miniula|vaium~37  ; |miniula|vaium~37  ; out0             ;
+; |miniula|vaium~38  ; |miniula|vaium~38  ; out0             ;
+; |miniula|vaium~39  ; |miniula|vaium~39  ; out0             ;
+; |miniula|vaium~40  ; |miniula|vaium~40  ; out0             ;
+; |miniula|vaium~41  ; |miniula|vaium~41  ; out0             ;
+; |miniula|result~14 ; |miniula|result~14 ; out0             ;
+; |miniula|result~15 ; |miniula|result~15 ; out0             ;
+; |miniula|vaium~42  ; |miniula|vaium~42  ; out0             ;
+; |miniula|vaium~43  ; |miniula|vaium~43  ; out0             ;
+; |miniula|vaium~44  ; |miniula|vaium~44  ; out0             ;
+; |miniula|vaium~45  ; |miniula|vaium~45  ; out0             ;
+; |miniula|vaium~46  ; |miniula|vaium~46  ; out0             ;
+; |miniula|result~16 ; |miniula|result~16 ; out0             ;
+; |miniula|result~17 ; |miniula|result~17 ; out0             ;
+; |miniula|vaium~47  ; |miniula|vaium~47  ; out0             ;
+; |miniula|vaium~48  ; |miniula|vaium~48  ; out0             ;
+; |miniula|vaium~49  ; |miniula|vaium~49  ; out0             ;
+; |miniula|vaium~50  ; |miniula|vaium~50  ; out0             ;
+; |miniula|result~18 ; |miniula|result~18 ; out0             ;
+; |miniula|result~19 ; |miniula|result~19 ; out0             ;
+; |miniula|vr~12     ; |miniula|vr~12     ; out              ;
+; |miniula|vr~13     ; |miniula|vr~13     ; out              ;
+; |miniula|result~20 ; |miniula|result~20 ; out0             ;
+; |miniula|vaium~52  ; |miniula|vaium~52  ; out0             ;
+; |miniula|result~21 ; |miniula|result~21 ; out0             ;
+; |miniula|result~22 ; |miniula|result~22 ; out0             ;
+; |miniula|vaium~53  ; |miniula|vaium~53  ; out0             ;
+; |miniula|vaium~54  ; |miniula|vaium~54  ; out0             ;
+; |miniula|vaium~55  ; |miniula|vaium~55  ; out0             ;
+; |miniula|vaium~56  ; |miniula|vaium~56  ; out0             ;
+; |miniula|vaium~57  ; |miniula|vaium~57  ; out0             ;
+; |miniula|result~23 ; |miniula|result~23 ; out0             ;
+; |miniula|result~24 ; |miniula|result~24 ; out0             ;
+; |miniula|vaium~58  ; |miniula|vaium~58  ; out0             ;
+; |miniula|vaium~59  ; |miniula|vaium~59  ; out0             ;
+; |miniula|vaium~60  ; |miniula|vaium~60  ; out0             ;
+; |miniula|vaium~61  ; |miniula|vaium~61  ; out0             ;
+; |miniula|vaium~62  ; |miniula|vaium~62  ; out0             ;
+; |miniula|result~25 ; |miniula|result~25 ; out0             ;
+; |miniula|result~26 ; |miniula|result~26 ; out0             ;
+; |miniula|vaium~63  ; |miniula|vaium~63  ; out0             ;
+; |miniula|vaium~64  ; |miniula|vaium~64  ; out0             ;
+; |miniula|vaium~65  ; |miniula|vaium~65  ; out0             ;
+; |miniula|vaium~66  ; |miniula|vaium~66  ; out0             ;
+; |miniula|vaium~67  ; |miniula|vaium~67  ; out0             ;
+; |miniula|result~27 ; |miniula|result~27 ; out0             ;
+; |miniula|result~28 ; |miniula|result~28 ; out0             ;
+; |miniula|vaium~68  ; |miniula|vaium~68  ; out0             ;
+; |miniula|vaium~69  ; |miniula|vaium~69  ; out0             ;
+; |miniula|vaium~70  ; |miniula|vaium~70  ; out0             ;
+; |miniula|vaium~71  ; |miniula|vaium~71  ; out0             ;
+; |miniula|vaium~72  ; |miniula|vaium~72  ; out0             ;
+; |miniula|result~29 ; |miniula|result~29 ; out0             ;
+; |miniula|result~30 ; |miniula|result~30 ; out0             ;
+; |miniula|vaium~73  ; |miniula|vaium~73  ; out0             ;
+; |miniula|vaium~74  ; |miniula|vaium~74  ; out0             ;
+; |miniula|vaium~75  ; |miniula|vaium~75  ; out0             ;
+; |miniula|vaium~76  ; |miniula|vaium~76  ; out0             ;
+; |miniula|result~31 ; |miniula|result~31 ; out0             ;
+; |miniula|result~32 ; |miniula|result~32 ; out0             ;
+; |miniula|vr~18     ; |miniula|vr~18     ; out              ;
+; |miniula|vr~19     ; |miniula|vr~19     ; out              ;
+; |miniula|vr~20     ; |miniula|vr~20     ; out              ;
+; |miniula|result~33 ; |miniula|result~33 ; out0             ;
+; |miniula|vaium~78  ; |miniula|vaium~78  ; out0             ;
+; |miniula|result~34 ; |miniula|result~34 ; out0             ;
+; |miniula|result~35 ; |miniula|result~35 ; out0             ;
+; |miniula|vaium~79  ; |miniula|vaium~79  ; out0             ;
+; |miniula|vaium~80  ; |miniula|vaium~80  ; out0             ;
+; |miniula|vaium~81  ; |miniula|vaium~81  ; out0             ;
+; |miniula|vaium~82  ; |miniula|vaium~82  ; out0             ;
+; |miniula|vaium~83  ; |miniula|vaium~83  ; out0             ;
+; |miniula|result~36 ; |miniula|result~36 ; out0             ;
+; |miniula|result~37 ; |miniula|result~37 ; out0             ;
+; |miniula|vaium~84  ; |miniula|vaium~84  ; out0             ;
+; |miniula|vaium~85  ; |miniula|vaium~85  ; out0             ;
+; |miniula|vaium~86  ; |miniula|vaium~86  ; out0             ;
+; |miniula|vaium~87  ; |miniula|vaium~87  ; out0             ;
+; |miniula|vaium~88  ; |miniula|vaium~88  ; out0             ;
+; |miniula|result~38 ; |miniula|result~38 ; out0             ;
+; |miniula|result~39 ; |miniula|result~39 ; out0             ;
+; |miniula|vaium~89  ; |miniula|vaium~89  ; out0             ;
+; |miniula|vaium~90  ; |miniula|vaium~90  ; out0             ;
+; |miniula|vaium~91  ; |miniula|vaium~91  ; out0             ;
+; |miniula|vaium~92  ; |miniula|vaium~92  ; out0             ;
+; |miniula|vaium~93  ; |miniula|vaium~93  ; out0             ;
+; |miniula|result~40 ; |miniula|result~40 ; out0             ;
+; |miniula|result~41 ; |miniula|result~41 ; out0             ;
+; |miniula|vaium~94  ; |miniula|vaium~94  ; out0             ;
+; |miniula|vaium~95  ; |miniula|vaium~95  ; out0             ;
+; |miniula|vaium~96  ; |miniula|vaium~96  ; out0             ;
+; |miniula|vaium~97  ; |miniula|vaium~97  ; out0             ;
+; |miniula|vaium~98  ; |miniula|vaium~98  ; out0             ;
+; |miniula|result~42 ; |miniula|result~42 ; out0             ;
+; |miniula|result~43 ; |miniula|result~43 ; out0             ;
+; |miniula|vaium~99  ; |miniula|vaium~99  ; out0             ;
+; |miniula|vaium~100 ; |miniula|vaium~100 ; out0             ;
+; |miniula|vaium~101 ; |miniula|vaium~101 ; out0             ;
+; |miniula|vaium~102 ; |miniula|vaium~102 ; out0             ;
+; |miniula|vaium~103 ; |miniula|vaium~103 ; out0             ;
+; |miniula|result~44 ; |miniula|result~44 ; out0             ;
+; |miniula|result~45 ; |miniula|result~45 ; out0             ;
+; |miniula|vr~24     ; |miniula|vr~24     ; out              ;
+; |miniula|vr~25     ; |miniula|vr~25     ; out              ;
+; |miniula|vr~26     ; |miniula|vr~26     ; out              ;
+; |miniula|vr~27     ; |miniula|vr~27     ; out              ;
+; |miniula|result~46 ; |miniula|result~46 ; out0             ;
+; |miniula|vaium~104 ; |miniula|vaium~104 ; out0             ;
+; |miniula|result~47 ; |miniula|result~47 ; out0             ;
+; |miniula|result~48 ; |miniula|result~48 ; out0             ;
+; |miniula|vaium~105 ; |miniula|vaium~105 ; out0             ;
+; |miniula|vaium~106 ; |miniula|vaium~106 ; out0             ;
+; |miniula|vaium~107 ; |miniula|vaium~107 ; out0             ;
+; |miniula|vaium~108 ; |miniula|vaium~108 ; out0             ;
+; |miniula|vaium~109 ; |miniula|vaium~109 ; out0             ;
+; |miniula|result~49 ; |miniula|result~49 ; out0             ;
+; |miniula|result~50 ; |miniula|result~50 ; out0             ;
+; |miniula|vaium~110 ; |miniula|vaium~110 ; out0             ;
+; |miniula|vaium~111 ; |miniula|vaium~111 ; out0             ;
+; |miniula|vaium~112 ; |miniula|vaium~112 ; out0             ;
+; |miniula|vaium~113 ; |miniula|vaium~113 ; out0             ;
+; |miniula|vaium~114 ; |miniula|vaium~114 ; out0             ;
+; |miniula|result~51 ; |miniula|result~51 ; out0             ;
+; |miniula|result~52 ; |miniula|result~52 ; out0             ;
+; |miniula|vaium~115 ; |miniula|vaium~115 ; out0             ;
+; |miniula|vaium~116 ; |miniula|vaium~116 ; out0             ;
+; |miniula|vaium~117 ; |miniula|vaium~117 ; out0             ;
+; |miniula|vaium~118 ; |miniula|vaium~118 ; out0             ;
+; |miniula|vaium~119 ; |miniula|vaium~119 ; out0             ;
+; |miniula|result~53 ; |miniula|result~53 ; out0             ;
+; |miniula|result~54 ; |miniula|result~54 ; out0             ;
+; |miniula|vaium~120 ; |miniula|vaium~120 ; out0             ;
+; |miniula|vaium~121 ; |miniula|vaium~121 ; out0             ;
+; |miniula|vaium~122 ; |miniula|vaium~122 ; out0             ;
+; |miniula|vaium~123 ; |miniula|vaium~123 ; out0             ;
+; |miniula|vaium~124 ; |miniula|vaium~124 ; out0             ;
+; |miniula|result~55 ; |miniula|result~55 ; out0             ;
+; |miniula|result~56 ; |miniula|result~56 ; out0             ;
+; |miniula|vaium~125 ; |miniula|vaium~125 ; out0             ;
+; |miniula|vaium~126 ; |miniula|vaium~126 ; out0             ;
+; |miniula|vaium~127 ; |miniula|vaium~127 ; out0             ;
+; |miniula|vaium~128 ; |miniula|vaium~128 ; out0             ;
+; |miniula|vaium~129 ; |miniula|vaium~129 ; out0             ;
+; |miniula|result~57 ; |miniula|result~57 ; out0             ;
+; |miniula|result~58 ; |miniula|result~58 ; out0             ;
+; |miniula|vr~30     ; |miniula|vr~30     ; out              ;
+; |miniula|vr~31     ; |miniula|vr~31     ; out              ;
+; |miniula|vr~32     ; |miniula|vr~32     ; out              ;
+; |miniula|vr~33     ; |miniula|vr~33     ; out              ;
+; |miniula|vr~34     ; |miniula|vr~34     ; out              ;
+; |miniula|result~59 ; |miniula|result~59 ; out0             ;
+; |miniula|vaium~130 ; |miniula|vaium~130 ; out0             ;
+; |miniula|result~60 ; |miniula|result~60 ; out0             ;
+; |miniula|result~61 ; |miniula|result~61 ; out0             ;
+; |miniula|vaium~131 ; |miniula|vaium~131 ; out0             ;
+; |miniula|vaium~132 ; |miniula|vaium~132 ; out0             ;
+; |miniula|vaium~133 ; |miniula|vaium~133 ; out0             ;
+; |miniula|vaium~134 ; |miniula|vaium~134 ; out0             ;
+; |miniula|vaium~135 ; |miniula|vaium~135 ; out0             ;
+; |miniula|result~62 ; |miniula|result~62 ; out0             ;
+; |miniula|result~63 ; |miniula|result~63 ; out0             ;
+; |miniula|vaium~136 ; |miniula|vaium~136 ; out0             ;
+; |miniula|vaium~137 ; |miniula|vaium~137 ; out0             ;
+; |miniula|vaium~138 ; |miniula|vaium~138 ; out0             ;
+; |miniula|vaium~139 ; |miniula|vaium~139 ; out0             ;
+; |miniula|vaium~140 ; |miniula|vaium~140 ; out0             ;
+; |miniula|result~64 ; |miniula|result~64 ; out0             ;
+; |miniula|result~65 ; |miniula|result~65 ; out0             ;
+; |miniula|vaium~141 ; |miniula|vaium~141 ; out0             ;
+; |miniula|vaium~142 ; |miniula|vaium~142 ; out0             ;
+; |miniula|vaium~143 ; |miniula|vaium~143 ; out0             ;
+; |miniula|vaium~144 ; |miniula|vaium~144 ; out0             ;
+; |miniula|vaium~145 ; |miniula|vaium~145 ; out0             ;
+; |miniula|result~66 ; |miniula|result~66 ; out0             ;
+; |miniula|result~67 ; |miniula|result~67 ; out0             ;
+; |miniula|vaium~146 ; |miniula|vaium~146 ; out0             ;
+; |miniula|vaium~147 ; |miniula|vaium~147 ; out0             ;
+; |miniula|vaium~148 ; |miniula|vaium~148 ; out0             ;
+; |miniula|vaium~149 ; |miniula|vaium~149 ; out0             ;
+; |miniula|vaium~150 ; |miniula|vaium~150 ; out0             ;
+; |miniula|result~68 ; |miniula|result~68 ; out0             ;
+; |miniula|result~69 ; |miniula|result~69 ; out0             ;
+; |miniula|vaium~151 ; |miniula|vaium~151 ; out0             ;
+; |miniula|vaium~152 ; |miniula|vaium~152 ; out0             ;
+; |miniula|vaium~153 ; |miniula|vaium~153 ; out0             ;
+; |miniula|vaium~154 ; |miniula|vaium~154 ; out0             ;
+; |miniula|vaium~155 ; |miniula|vaium~155 ; out0             ;
+; |miniula|result~70 ; |miniula|result~70 ; out0             ;
+; |miniula|result~71 ; |miniula|result~71 ; out0             ;
+; |miniula|vr~36     ; |miniula|vr~36     ; out              ;
+; |miniula|vr~37     ; |miniula|vr~37     ; out              ;
+; |miniula|vr~38     ; |miniula|vr~38     ; out              ;
+; |miniula|vr~39     ; |miniula|vr~39     ; out              ;
+; |miniula|vr~40     ; |miniula|vr~40     ; out              ;
+; |miniula|vr~41     ; |miniula|vr~41     ; out              ;
+; |miniula|result~72 ; |miniula|result~72 ; out0             ;
+; |miniula|vaium~156 ; |miniula|vaium~156 ; out0             ;
+; |miniula|result~73 ; |miniula|result~73 ; out0             ;
+; |miniula|result~74 ; |miniula|result~74 ; out0             ;
+; |miniula|vaium~157 ; |miniula|vaium~157 ; out0             ;
+; |miniula|vaium~158 ; |miniula|vaium~158 ; out0             ;
+; |miniula|vaium~159 ; |miniula|vaium~159 ; out0             ;
+; |miniula|vaium~160 ; |miniula|vaium~160 ; out0             ;
+; |miniula|vaium~161 ; |miniula|vaium~161 ; out0             ;
+; |miniula|result~75 ; |miniula|result~75 ; out0             ;
+; |miniula|result~76 ; |miniula|result~76 ; out0             ;
+; |miniula|vaium~162 ; |miniula|vaium~162 ; out0             ;
+; |miniula|vaium~163 ; |miniula|vaium~163 ; out0             ;
+; |miniula|vaium~164 ; |miniula|vaium~164 ; out0             ;
+; |miniula|vaium~165 ; |miniula|vaium~165 ; out0             ;
+; |miniula|vaium~166 ; |miniula|vaium~166 ; out0             ;
+; |miniula|result~77 ; |miniula|result~77 ; out0             ;
+; |miniula|result~78 ; |miniula|result~78 ; out0             ;
+; |miniula|vaium~167 ; |miniula|vaium~167 ; out0             ;
+; |miniula|vaium~168 ; |miniula|vaium~168 ; out0             ;
+; |miniula|vaium~169 ; |miniula|vaium~169 ; out0             ;
+; |miniula|vaium~170 ; |miniula|vaium~170 ; out0             ;
+; |miniula|vaium~171 ; |miniula|vaium~171 ; out0             ;
+; |miniula|result~79 ; |miniula|result~79 ; out0             ;
+; |miniula|result~80 ; |miniula|result~80 ; out0             ;
+; |miniula|vaium~172 ; |miniula|vaium~172 ; out0             ;
+; |miniula|vaium~173 ; |miniula|vaium~173 ; out0             ;
+; |miniula|vaium~174 ; |miniula|vaium~174 ; out0             ;
+; |miniula|vaium~175 ; |miniula|vaium~175 ; out0             ;
+; |miniula|vaium~176 ; |miniula|vaium~176 ; out0             ;
+; |miniula|result~81 ; |miniula|result~81 ; out0             ;
+; |miniula|result~82 ; |miniula|result~82 ; out0             ;
+; |miniula|vaium~177 ; |miniula|vaium~177 ; out0             ;
+; |miniula|vaium~178 ; |miniula|vaium~178 ; out0             ;
+; |miniula|vaium~179 ; |miniula|vaium~179 ; out0             ;
+; |miniula|vaium~180 ; |miniula|vaium~180 ; out0             ;
+; |miniula|vaium~181 ; |miniula|vaium~181 ; out0             ;
+; |miniula|result~83 ; |miniula|result~83 ; out0             ;
+; |miniula|result~84 ; |miniula|result~84 ; out0             ;
+; |miniula|vr~42     ; |miniula|vr~42     ; out              ;
+; |miniula|vr~43     ; |miniula|vr~43     ; out              ;
+; |miniula|vr~44     ; |miniula|vr~44     ; out              ;
+; |miniula|vr~45     ; |miniula|vr~45     ; out              ;
+; |miniula|vr~46     ; |miniula|vr~46     ; out              ;
+; |miniula|vr~47     ; |miniula|vr~47     ; out              ;
+; |miniula|vr~48     ; |miniula|vr~48     ; out              ;
+; |miniula|a[0]      ; |miniula|a[0]      ; out              ;
+; |miniula|a[1]      ; |miniula|a[1]      ; out              ;
+; |miniula|a[2]      ; |miniula|a[2]      ; out              ;
+; |miniula|a[3]      ; |miniula|a[3]      ; out              ;
+; |miniula|a[4]      ; |miniula|a[4]      ; out              ;
+; |miniula|a[5]      ; |miniula|a[5]      ; out              ;
+; |miniula|a[6]      ; |miniula|a[6]      ; out              ;
+; |miniula|a[7]      ; |miniula|a[7]      ; out              ;
+; |miniula|b[0]      ; |miniula|b[0]      ; out              ;
+; |miniula|b[1]      ; |miniula|b[1]      ; out              ;
+; |miniula|b[2]      ; |miniula|b[2]      ; out              ;
+; |miniula|b[3]      ; |miniula|b[3]      ; out              ;
+; |miniula|b[4]      ; |miniula|b[4]      ; out              ;
+; |miniula|b[5]      ; |miniula|b[5]      ; out              ;
+; |miniula|b[6]      ; |miniula|b[6]      ; out              ;
+; |miniula|b[7]      ; |miniula|b[7]      ; out              ;
+; |miniula|s[1]      ; |miniula|s[1]      ; pin_out          ;
+; |miniula|Equal0~0  ; |miniula|Equal0~0  ; out0             ;
+; |miniula|Equal1~0  ; |miniula|Equal1~0  ; out0             ;
+; |miniula|Equal1~1  ; |miniula|Equal1~1  ; out0             ;
+; |miniula|Equal1~2  ; |miniula|Equal1~2  ; out0             ;
+; |miniula|Equal1~3  ; |miniula|Equal1~3  ; out0             ;
+; |miniula|Equal1~4  ; |miniula|Equal1~4  ; out0             ;
+; |miniula|Equal1~5  ; |miniula|Equal1~5  ; out0             ;
+; |miniula|Equal1~6  ; |miniula|Equal1~6  ; out0             ;
+; |miniula|Equal1~7  ; |miniula|Equal1~7  ; out0             ;
+; |miniula|Equal2~0  ; |miniula|Equal2~0  ; out0             ;
+; |miniula|Equal2~1  ; |miniula|Equal2~1  ; out0             ;
+; |miniula|Equal2~2  ; |miniula|Equal2~2  ; out0             ;
+; |miniula|Equal2~3  ; |miniula|Equal2~3  ; out0             ;
+; |miniula|Equal2~4  ; |miniula|Equal2~4  ; out0             ;
+; |miniula|Equal2~5  ; |miniula|Equal2~5  ; out0             ;
+; |miniula|Equal2~6  ; |miniula|Equal2~6  ; out0             ;
+; |miniula|Equal2~7  ; |miniula|Equal2~7  ; out0             ;
+; |miniula|Equal3~0  ; |miniula|Equal3~0  ; out0             ;
+; |miniula|Equal3~1  ; |miniula|Equal3~1  ; out0             ;
+; |miniula|Equal3~2  ; |miniula|Equal3~2  ; out0             ;
+; |miniula|Equal3~3  ; |miniula|Equal3~3  ; out0             ;
+; |miniula|Equal3~4  ; |miniula|Equal3~4  ; out0             ;
+; |miniula|Equal3~5  ; |miniula|Equal3~5  ; out0             ;
+; |miniula|Equal3~6  ; |miniula|Equal3~6  ; out0             ;
+; |miniula|Equal3~7  ; |miniula|Equal3~7  ; out0             ;
+; |miniula|Equal4~0  ; |miniula|Equal4~0  ; out0             ;
+; |miniula|Equal4~1  ; |miniula|Equal4~1  ; out0             ;
+; |miniula|Equal4~2  ; |miniula|Equal4~2  ; out0             ;
+; |miniula|Equal4~3  ; |miniula|Equal4~3  ; out0             ;
+; |miniula|Equal4~4  ; |miniula|Equal4~4  ; out0             ;
+; |miniula|Equal4~5  ; |miniula|Equal4~5  ; out0             ;
+; |miniula|Equal4~6  ; |miniula|Equal4~6  ; out0             ;
+; |miniula|Equal4~7  ; |miniula|Equal4~7  ; out0             ;
+; |miniula|Equal5~0  ; |miniula|Equal5~0  ; out0             ;
+; |miniula|Equal5~1  ; |miniula|Equal5~1  ; out0             ;
+; |miniula|Equal5~2  ; |miniula|Equal5~2  ; out0             ;
+; |miniula|Equal5~3  ; |miniula|Equal5~3  ; out0             ;
+; |miniula|Equal5~4  ; |miniula|Equal5~4  ; out0             ;
+; |miniula|Equal5~5  ; |miniula|Equal5~5  ; out0             ;
+; |miniula|Equal5~6  ; |miniula|Equal5~6  ; out0             ;
+; |miniula|Equal5~7  ; |miniula|Equal5~7  ; out0             ;
+; |miniula|Equal6~0  ; |miniula|Equal6~0  ; out0             ;
+; |miniula|Equal6~1  ; |miniula|Equal6~1  ; out0             ;
+; |miniula|Equal6~2  ; |miniula|Equal6~2  ; out0             ;
+; |miniula|Equal6~3  ; |miniula|Equal6~3  ; out0             ;
+; |miniula|Equal6~4  ; |miniula|Equal6~4  ; out0             ;
+; |miniula|Equal6~5  ; |miniula|Equal6~5  ; out0             ;
+; |miniula|Equal6~6  ; |miniula|Equal6~6  ; out0             ;
+; |miniula|Equal6~7  ; |miniula|Equal6~7  ; out0             ;
+; |miniula|Equal6~8  ; |miniula|Equal6~8  ; out0             ;
+; |miniula|Equal7~0  ; |miniula|Equal7~0  ; out0             ;
+; |miniula|Equal7~1  ; |miniula|Equal7~1  ; out0             ;
+; |miniula|Equal7~2  ; |miniula|Equal7~2  ; out0             ;
+; |miniula|Equal7~3  ; |miniula|Equal7~3  ; out0             ;
+; |miniula|Equal7~4  ; |miniula|Equal7~4  ; out0             ;
+; |miniula|Equal7~5  ; |miniula|Equal7~5  ; out0             ;
+; |miniula|Equal7~6  ; |miniula|Equal7~6  ; out0             ;
+; |miniula|Equal7~7  ; |miniula|Equal7~7  ; out0             ;
++--------------------+--------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++----------------------------------------------------------+
+; Missing 1-Value Coverage                                 ;
++-------------------+-------------------+------------------+
+; Node Name         ; Output Port Name  ; Output Port Type ;
++-------------------+-------------------+------------------+
+; |miniula|vaium~5  ; |miniula|vaium~5  ; out0             ;
+; |miniula|vaium~25 ; |miniula|vaium~25 ; out0             ;
+; |miniula|vr~0     ; |miniula|vr~0     ; out              ;
+; |miniula|vr~1     ; |miniula|vr~1     ; out              ;
+; |miniula|vr~2     ; |miniula|vr~2     ; out              ;
+; |miniula|vr~3     ; |miniula|vr~3     ; out              ;
+; |miniula|vr~4     ; |miniula|vr~4     ; out              ;
+; |miniula|vr~5     ; |miniula|vr~5     ; out              ;
+; |miniula|vaium~51 ; |miniula|vaium~51 ; out0             ;
+; |miniula|vr~7     ; |miniula|vr~7     ; out              ;
+; |miniula|vr~8     ; |miniula|vr~8     ; out              ;
+; |miniula|vr~9     ; |miniula|vr~9     ; out              ;
+; |miniula|vr~10    ; |miniula|vr~10    ; out              ;
+; |miniula|vr~11    ; |miniula|vr~11    ; out              ;
+; |miniula|vaium~77 ; |miniula|vaium~77 ; out0             ;
+; |miniula|vr~14    ; |miniula|vr~14    ; out              ;
+; |miniula|vr~15    ; |miniula|vr~15    ; out              ;
+; |miniula|vr~16    ; |miniula|vr~16    ; out              ;
+; |miniula|vr~17    ; |miniula|vr~17    ; out              ;
+; |miniula|vr~21    ; |miniula|vr~21    ; out              ;
+; |miniula|vr~22    ; |miniula|vr~22    ; out              ;
+; |miniula|vr~23    ; |miniula|vr~23    ; out              ;
+; |miniula|vr~28    ; |miniula|vr~28    ; out              ;
+; |miniula|vr~29    ; |miniula|vr~29    ; out              ;
+; |miniula|vr~35    ; |miniula|vr~35    ; out              ;
+; |miniula|s[0]     ; |miniula|s[0]     ; pin_out          ;
+; |miniula|s[2]     ; |miniula|s[2]     ; pin_out          ;
+; |miniula|s[3]     ; |miniula|s[3]     ; pin_out          ;
+; |miniula|s[4]     ; |miniula|s[4]     ; pin_out          ;
+; |miniula|s[5]     ; |miniula|s[5]     ; pin_out          ;
+; |miniula|s[6]     ; |miniula|s[6]     ; pin_out          ;
+; |miniula|s[7]     ; |miniula|s[7]     ; pin_out          ;
+; |miniula|Equal0~1 ; |miniula|Equal0~1 ; out0             ;
+; |miniula|Equal1~8 ; |miniula|Equal1~8 ; out0             ;
+; |miniula|Equal2~8 ; |miniula|Equal2~8 ; out0             ;
+; |miniula|Equal3~8 ; |miniula|Equal3~8 ; out0             ;
+; |miniula|Equal4~8 ; |miniula|Equal4~8 ; out0             ;
+; |miniula|Equal5~8 ; |miniula|Equal5~8 ; out0             ;
+; |miniula|Equal7~8 ; |miniula|Equal7~8 ; out0             ;
++-------------------+-------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++----------------------------------------------------------+
+; Missing 0-Value Coverage                                 ;
++-------------------+-------------------+------------------+
+; Node Name         ; Output Port Name  ; Output Port Type ;
++-------------------+-------------------+------------------+
+; |miniula|vaium~6  ; |miniula|vaium~6  ; out0             ;
+; |miniula|vaium~25 ; |miniula|vaium~25 ; out0             ;
+; |miniula|vr~0     ; |miniula|vr~0     ; out              ;
+; |miniula|vr~1     ; |miniula|vr~1     ; out              ;
+; |miniula|vr~2     ; |miniula|vr~2     ; out              ;
+; |miniula|vr~3     ; |miniula|vr~3     ; out              ;
+; |miniula|vr~4     ; |miniula|vr~4     ; out              ;
+; |miniula|vr~5     ; |miniula|vr~5     ; out              ;
+; |miniula|vaium~51 ; |miniula|vaium~51 ; out0             ;
+; |miniula|vr~7     ; |miniula|vr~7     ; out              ;
+; |miniula|vr~8     ; |miniula|vr~8     ; out              ;
+; |miniula|vr~9     ; |miniula|vr~9     ; out              ;
+; |miniula|vr~10    ; |miniula|vr~10    ; out              ;
+; |miniula|vr~11    ; |miniula|vr~11    ; out              ;
+; |miniula|vaium~77 ; |miniula|vaium~77 ; out0             ;
+; |miniula|vr~14    ; |miniula|vr~14    ; out              ;
+; |miniula|vr~15    ; |miniula|vr~15    ; out              ;
+; |miniula|vr~16    ; |miniula|vr~16    ; out              ;
+; |miniula|vr~17    ; |miniula|vr~17    ; out              ;
+; |miniula|vr~21    ; |miniula|vr~21    ; out              ;
+; |miniula|vr~22    ; |miniula|vr~22    ; out              ;
+; |miniula|vr~23    ; |miniula|vr~23    ; out              ;
+; |miniula|vr~28    ; |miniula|vr~28    ; out              ;
+; |miniula|vr~29    ; |miniula|vr~29    ; out              ;
+; |miniula|vr~35    ; |miniula|vr~35    ; out              ;
+; |miniula|s[0]     ; |miniula|s[0]     ; pin_out          ;
+; |miniula|s[2]     ; |miniula|s[2]     ; pin_out          ;
+; |miniula|s[3]     ; |miniula|s[3]     ; pin_out          ;
+; |miniula|s[4]     ; |miniula|s[4]     ; pin_out          ;
+; |miniula|s[5]     ; |miniula|s[5]     ; pin_out          ;
+; |miniula|s[6]     ; |miniula|s[6]     ; pin_out          ;
+; |miniula|s[7]     ; |miniula|s[7]     ; pin_out          ;
+; |miniula|Equal0~1 ; |miniula|Equal0~1 ; out0             ;
+; |miniula|Equal1~8 ; |miniula|Equal1~8 ; out0             ;
+; |miniula|Equal2~8 ; |miniula|Equal2~8 ; out0             ;
+; |miniula|Equal3~8 ; |miniula|Equal3~8 ; out0             ;
+; |miniula|Equal4~8 ; |miniula|Equal4~8 ; out0             ;
+; |miniula|Equal5~8 ; |miniula|Equal5~8 ; out0             ;
+; |miniula|Equal7~8 ; |miniula|Equal7~8 ; out0             ;
++-------------------+-------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 11.0 Build 208 07/03/2011 Service Pack 1 SJ Full Version
+    Info: Processing started: Tue Aug 20 14:44:42 2013
+Info: Command: quartus_sim --simulation_results_format=VWF miniula -c miniula
+Info: Using vector source file "C:/Users/labhw.DCOMP/Desktop/miniula/Waveform2.vwf"
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      90.12 %
+Info: Number of transitions in simulation is 2694
+Info: Vector file miniula.sim.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 181 megabytes
+    Info: Processing ended: Tue Aug 20 14:44:46 2013
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:03
+
+

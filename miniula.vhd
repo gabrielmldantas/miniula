@@ -1,5 +1,6 @@
 library IEEE;
 use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
 use work.logic.all;
 use work.arith.all;
 
@@ -34,19 +35,19 @@ begin
 			when opcode_add => s <= add(a,b);
 			when opcode_sub => s <= sub(a,b);
 			when opcode_div => s <= div(a,b);
-			when opcode_mul => s <= mul(a,b);
-			when opcode_inc => s <= inc(a,b);
-			when opcode_dec => s <= dec(a,b);
-			when opcode_conv_bin_int => s <= conv_bin_int(a,b);
-			when opcode_pow => s <= pow(a,b);
-			when opcode_modulo => s <= modulo(a,b);
+			when opcode_mul => s <= mul(a(3 downto 0), b(3 downto 0));
+			when opcode_inc => s <= inc(a);
+			when opcode_dec => s <= dec(a);
+			when opcode_conv_bin_int => s <= "00000000";--conv_bin_int(a);
+			when opcode_pow => s <= "00000000";--pow(a,b);
+			when opcode_modulo => s(0) <= modulo(a,b);
 			when opcode_and2 => s <= and2(a,b);
 			when opcode_or2 => s <= or2(a,b);
 			when opcode_xor2 => s <= xor2(a,b);
-			when opcode_not2 => s <= not2(a,b);
-			when opcode_comp => s <= comp(a,b);
-			--when opcode_mdc => s <= add(a,b);
-			
+			when opcode_not2 => s <= not2(a);
+			when opcode_comp => s(0) <= comp(a,b);
+			when opcode_mdc => s <= add(a,b);
+			when others => s <= "XXXXXXXX";
 		end case;
 	end process;
 end arch;

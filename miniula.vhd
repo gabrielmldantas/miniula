@@ -28,4 +28,25 @@ constant opcode_not2 : std_logic_vector (3 downto 0) := "1101";
 constant opcode_comp : std_logic_vector (3 downto 0) := "1110";
 
 begin
+	process(a, b, opcode)
+	begin
+		case opcode is
+			when opcode_add => s <= add(a,b);
+			when opcode_sub => s <= sub(a,b);
+			when opcode_div => s <= div(a,b);
+			when opcode_mul => s <= mul(a,b);
+			when opcode_inc => s <= inc(a,b);
+			when opcode_dec => s <= dec(a,b);
+			when opcode_conv_bin_int => s <= conv_bin_int(a,b);
+			when opcode_pow => s <= pow(a,b);
+			when opcode_modulo => s <= modulo(a,b);
+			when opcode_and2 => s <= and2(a,b);
+			when opcode_or2 => s <= or2(a,b);
+			when opcode_xor2 => s <= xor2(a,b);
+			when opcode_not2 => s <= not2(a,b);
+			when opcode_comp => s <= comp(a,b);
+			--when opcode_mdc => s <= add(a,b);
+			
+		end case;
+	end process;
 end arch;

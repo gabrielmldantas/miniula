@@ -2,53 +2,30 @@ library IEEE;
 use ieee.std_logic_1164.all;
 use work.logic.all;
 use work.arith.all;
-use work.util.all;
 
 entity miniula is
 	port(a : in std_logic_vector(7 downto 0);
 		  b : in std_logic_vector(7 downto 0);
+		  opcode : in std_logic_vector(3 downto 0)
 		  s : out std_logic_vector(7 downto 0));
 end miniula;
 
 architecture arch of miniula is
+constant opcode_add : std_logic_vector (3 downto 0) := "0000";
+constant opcode_sub : std_logic_vector (3 downto 0) := "0001";
+constant opcode_div : std_logic_vector (3 downto 0) := "0010";
+constant opcode_mul : std_logic_vector (3 downto 0) := "0011";
+constant opcode_inc : std_logic_vector (3 downto 0) := "0100";
+constant opcode_dec : std_logic_vector (3 downto 0) := "0101";
+constant opcode_conv_bin_int : std_logic_vector (3 downto 0) := "0110";
+constant opcode_pow : std_logic_vector (3 downto 0) := "0111";
+constant opcode_modulo : std_logic_vector (3 downto 0) := "1000";
+constant opcode_mdc : std_logic_vector (3 downto 0) := "1001";
+constant opcode_and2 : std_logic_vector (3 downto 0) := "1010";
+constant opcode_or2 : std_logic_vector (3 downto 0) := "1011";
+constant opcode_xor2 : std_logic_vector (3 downto 0) := "1100";
+constant opcode_not2 : std_logic_vector (3 downto 0) := "1101";
+constant opcode_comp : std_logic_vector (3 downto 0) := "1110";
 
-function deslocador_esquerda_1bit (x : std_logic_vector (7 downto 0))
-return std_logic_vector is
-variable y : std_logic_vector (7 downto 0);
 begin
-for i in 7 downto 1 loop
- y(i) := x(i-1);
- end loop ;
- y(0) := '0';
-return y;
-end;
-
-function div(a: std_logic_vector(7 downto 0); b: std_logic_vector(7 downto 0)) return std_logic_vector is
-variable vq, vr : std_logic_vector (7 downto 0);
-variable quoc, resto : std_logic;
-begin
-	vq := a;
-	quoc := '0';
-	resto := '0';
-	vr := "00000000";
-	for i in 0 to 7 loop
-		quoc := vq(7);
-		vq := deslocador_esquerda_1bit(vq);
-		vq(0) := resto;
-		vr := deslocador_esquerda_1bit(vr);
-		vr(0) := quoc;
-		resto := comp(vr, b);
-		if resto = '1' then
-			vr := sub (vr, b);
-		end if;
-	end loop;
-	vq := deslocador_esquerda_1bit (vq);
-	vq(0) := resto;
-	return vq;
-end div;
-begin
-process (a, b)
-begin
-	s <= div(a, b);
-end process;
 end arch;

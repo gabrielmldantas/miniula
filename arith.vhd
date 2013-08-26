@@ -1,19 +1,20 @@
 library IEEE;
 use ieee.std_logic_1164.all;
+use work.logic.all;
 
 PACKAGE arith IS
 	function add(a: std_logic_vector(7 downto 0); b: std_logic_vector(7 downto 0)) return std_logic_vector;
 	function sub(a: std_logic_vector(7 downto 0); b: std_logic_vector(7 downto 0)) return std_logic_vector;
-	
+	function div(a: std_logic_vector(7 downto 0); b: std_logic_vector(7 downto 0)) return std_logic_vector;
 	function mul(a: std_logic_vector(3 downto 0); b: std_logic_vector(3 downto 0)) return std_logic_vector;
+	
 	function inc(a: in std_logic_vector(7 downto 0)) return std_logic_vector;
 	function dec(a: in std_logic_vector(7 downto 0)) return std_logic_vector;
 	function conv_bin_int(a:  in std_logic_vector(7 downto 0)) return integer;
-	function pow(b : integer; e : integer) return integer;
 	
-	--function div(a: std_logic_vector(7 downto 0); b: std_logic_vector(7 downto 0)) return std_logic_vector;
-	--function modulo
-	--function mdc
+	function pow(b : integer; e : integer) return integer;
+	function modulo(a: std_logic_vector(7 downto 0); b: std_logic_vector(7 downto 0)) return std_logic;
+	function mdc (a: std_logic_vector(7 downto 0); b: std_logic_vector(7 downto 0)) return std_logic_vector;
 END arith;
 
 PACKAGE BODY arith IS
@@ -62,6 +63,18 @@ begin
 	end loop ;
 	y(0) := '0';
 	return y;
+end;
+
+-- Verificar se está funcionando, para a divisao
+function deslocador_esquerda_1bit (x : std_logic_vector (7 downto 0))
+return std_logic_vector is
+variable y : std_logic_vector (7 downto 0);
+begin
+for i in 7 downto 1 loop
+ y(i) := x(i-1);
+ end loop ;
+ y(0) := '0';
+return y;
 end;
 
 function somador8bits (a : std_logic_vector (7 downto 0);
@@ -137,5 +150,60 @@ begin
 	end loop;
 	return inteiro;
 end conv_bin_int;
+
+-- Verificar se está funcionando
+function div(a: std_logic_vector(7 downto 0); b: std_logic_vector(7 downto 0)) return std_logic_vector is 
+variable vq, vr : std_logic_vector (7 downto 0);
+variable quoc, resto : std_logic;
+begin
+	vq := a;
+	quoc := '0';
+	resto := '0';
+	vr := "00000000";
+	for i in 0 to 7 loop
+		quoc := vq(7);
+		vq := deslocador_esquerda_1bit(vq);
+		vq(0) := resto;
+		vr := deslocador_esquerda_1bit(vr);
+		vr(0) := quoc;
+		resto := comp(vr, b);
+		if resto = '1' then
+			vr := sub (vr, b);
+		end if;
+	end loop;
+	vq := deslocador_esquerda_1bit (vq);
+	vq(0) := resto;
+	return vq;
+end div;
+
+-- Verificar se está funcionando
+function modulo(a: std_logic_vector(7 downto 0); b: std_logic_vector(7 downto 0)) return std_logic is 
+variable vq, vr : std_logic_vector (7 downto 0);
+variable quoc, resto : std_logic;
+begin
+	vq := a;
+	quoc := '0';
+	resto := '0';
+	vr := "00000000";
+	for i in 0 to 7 loop
+		quoc := vq(7);
+		vq := deslocador_esquerda_1bit(vq);
+		vq(0) := resto;
+		vr := deslocador_esquerda_1bit(vr);
+		vr(0) := quoc;
+		resto := comp(vr, b);
+		if resto = '1' then
+			vr := sub (vr, b);
+		end if;
+	end loop;
+	vq := deslocador_esquerda_1bit (vq);
+	vq(0) := resto;
+	return resto;
+end modulo;
+
+function mdc (a: std_logic_vector(7 downto 0); b: std_logic_vector(7 downto 0)) return std_logic_vector is
+begin
+
+end mdc;
 
 END arith;

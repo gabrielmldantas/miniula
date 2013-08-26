@@ -40,7 +40,7 @@ begin
 			when opcode_dec => s <= dec(a);
 			when opcode_conv_bin_int => s <= "00000000";--conv_bin_int(a);
 			when opcode_pow => s <= "00000000";--pow(a,b);
-			when opcode_modulo => s(0) <= modulo(a,b);
+			when opcode_modulo => s <= modulo(a,b);
 			when opcode_and2 => s <= and2(a,b);
 			when opcode_or2 => s <= or2(a,b);
 			when opcode_xor2 => s <= xor2(a,b);

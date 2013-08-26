@@ -46,7 +46,7 @@ begin
 			when opcode_xor2 => s <= xor2(a,b);
 			when opcode_not2 => s <= not2(a);
 			when opcode_comp => s(0) <= comp(a,b);
-			when opcode_mdc => s <= add(a,b);
+			when opcode_mdc => s <= mdc(a,b);
 			when others => s <= "XXXXXXXX";
 		end case;
 	end process;

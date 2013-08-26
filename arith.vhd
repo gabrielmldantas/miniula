@@ -203,7 +203,7 @@ end modulo;
 
 function mdc (a: std_logic_vector(7 downto 0); b: std_logic_vector(7 downto 0)) return std_logic_vector is
 begin
-
+	return "00000000";
 end mdc;
 
 END arith;

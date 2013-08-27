@@ -19,14 +19,15 @@ constant opcode_mul : std_logic_vector (3 downto 0) := "0011";
 constant opcode_inc : std_logic_vector (3 downto 0) := "0100";
 constant opcode_dec : std_logic_vector (3 downto 0) := "0101";
 constant opcode_conv_bin_int : std_logic_vector (3 downto 0) := "0110";
-constant opcode_pow : std_logic_vector (3 downto 0) := "0111";
-constant opcode_modulo : std_logic_vector (3 downto 0) := "1000";
-constant opcode_mdc : std_logic_vector (3 downto 0) := "1001";
-constant opcode_and2 : std_logic_vector (3 downto 0) := "1010";
-constant opcode_or2 : std_logic_vector (3 downto 0) := "1011";
-constant opcode_xor2 : std_logic_vector (3 downto 0) := "1100";
-constant opcode_not2 : std_logic_vector (3 downto 0) := "1101";
-constant opcode_comp : std_logic_vector (3 downto 0) := "1110";
+constant opcode_conv_int_bin : std_logic_vector (3 downto 0) := "0111";
+constant opcode_pow : std_logic_vector (3 downto 0) := "1000";
+constant opcode_modulo : std_logic_vector (3 downto 0) := "1001";
+constant opcode_nand2 : std_logic_vector (3 downto 0) := "1010";
+constant opcode_and2 : std_logic_vector (3 downto 0) := "1011";
+constant opcode_or2 : std_logic_vector (3 downto 0) := "1100";
+constant opcode_xor2 : std_logic_vector (3 downto 0) := "1101";
+constant opcode_not2 : std_logic_vector (3 downto 0) := "1110";
+constant opcode_comp : std_logic_vector (3 downto 0) := "1111";
 
 begin
 	process(a, b, opcode)
@@ -38,16 +39,17 @@ begin
 			when opcode_mul => s <= mul(a(3 downto 0), b(3 downto 0));
 			when opcode_inc => s <= inc(a);
 			when opcode_dec => s <= dec(a);
-			when opcode_conv_bin_int => s <= "00000000";--conv_bin_int(a);
-			when opcode_pow => s <= "00000000";--pow(a,b);
+			when opcode_conv_bin_int => s <= "00000000"; --conv_bin_int(a);
+			when opcode_conv_int_bin => s <= "00000000"; --conv_int_bin(a);
+			when opcode_pow => s <= conv_int_bin(pow(conv_bin_int(a),conv_bin_int(b)));
 			when opcode_modulo => s(0) <= modulo(a,b);
 			when opcode_and2 => s <= and2(a,b);
 			when opcode_or2 => s <= or2(a,b);
 			when opcode_xor2 => s <= xor2(a,b);
 			when opcode_not2 => s <= not2(a);
 			when opcode_comp => s(0) <= comp(a,b);
-			when opcode_mdc => s <= mdc(a,b);
-			when others => s <= "XXXXXXXX";
+			when opcode_nand2 => s <= nand2(a,b);
+			when others => s <= "ZZZZZZZZ";
 		end case;
 	end process;
 end arch;

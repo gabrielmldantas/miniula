@@ -7,6 +7,7 @@ PACKAGE logic IS
 	function xor2(a: std_logic_vector(7 downto 0); b: std_logic_vector(7 downto 0)) return std_logic_vector;
 	function not2(a: std_logic_vector(7 downto 0)) return std_logic_vector;
 	function comp(a: std_logic_vector(7 downto 0); b: std_logic_vector(7 downto 0)) return std_logic;
+	function nand2(a: std_logic_vector(7 downto 0); b: std_logic_vector(7 downto 0)) return std_logic_vector;
 END logic;
 
 PACKAGE BODY logic IS
@@ -55,4 +56,12 @@ begin
 	end if;
 end comp;
 
+function nand2(a: std_logic_vector(7 downto 0); b: std_logic_vector(7 downto 0)) return std_logic_vector is
+variable c : std_logic_vector(7 downto 0);
+begin
+	for i in 7 downto 0 loop
+		c(i) := b(i) nand a(i);
+	end loop;
+	return c;
+end nand2;
 END logic;

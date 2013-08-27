@@ -11,10 +11,11 @@ PACKAGE arith IS
 	function inc(a: in std_logic_vector(7 downto 0)) return std_logic_vector;
 	function dec(a: in std_logic_vector(7 downto 0)) return std_logic_vector;
 	function conv_bin_int(a:  in std_logic_vector(7 downto 0)) return integer;
+	function conv_int_bin(a:  in integer) return std_logic_vector;
 	
 	function pow(b : integer; e : integer) return integer;
 	function modulo(a: std_logic_vector(7 downto 0); b: std_logic_vector(7 downto 0)) return std_logic;
-	function mdc (a: std_logic_vector(7 downto 0); b: std_logic_vector(7 downto 0)) return std_logic_vector;
+	
 END arith;
 
 PACKAGE BODY arith IS
@@ -65,7 +66,7 @@ begin
 	return y;
 end;
 
--- Verificar se está funcionando, para a divisao
+
 function deslocador_esquerda_1bit (x : std_logic_vector (7 downto 0))
 return std_logic_vector is
 variable y : std_logic_vector (7 downto 0);
@@ -201,9 +202,19 @@ begin
 	return resto;
 end modulo;
 
-function mdc (a: std_logic_vector(7 downto 0); b: std_logic_vector(7 downto 0)) return std_logic_vector is
+function conv_int_bin(a:  in integer) return std_logic_vector is
 begin
 	return "00000000";
-end mdc;
-
+--variable aux,count : integer;
+--variable aux2 : std_logic_vector(7 downto 0);
+--begin
+--	count := 0;
+--	aux2(count) := modulo(a,2);
+--	a := div(a,2);
+--	while (a > 2) loop
+--		aux2(count) := modulo(a,2);
+--		a := div(a,2);
+--		count := count + 1;
+--	end loop;
+end conv_int_bin;
 END arith;

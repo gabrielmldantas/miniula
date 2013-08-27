@@ -39,10 +39,16 @@ begin
 			when opcode_mul => s <= mul(a(3 downto 0), b(3 downto 0));
 			when opcode_inc => s <= inc(a);
 			when opcode_dec => s <= dec(a);
+<<<<<<< HEAD
 			when opcode_conv_bin_int => s <= "00000000"; --conv_bin_int(a);
 			when opcode_conv_int_bin => s <= "00000000"; --conv_int_bin(a);
 			when opcode_pow => s <= conv_int_bin(pow(conv_bin_int(a),conv_bin_int(b)));
 			when opcode_modulo => s(0) <= modulo(a,b);
+=======
+			when opcode_conv_bin_int => s <= "00000000";--conv_bin_int(a);
+			when opcode_pow => s <= "00000000";--pow(a,b);
+			when opcode_modulo => s <= modulo(a,b);
+>>>>>>> 33cf496567b32035f688895a19bf4a2c412cb4db
 			when opcode_and2 => s <= and2(a,b);
 			when opcode_or2 => s <= or2(a,b);
 			when opcode_xor2 => s <= xor2(a,b);

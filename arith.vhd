@@ -14,13 +14,8 @@ PACKAGE arith IS
 	function conv_int_bin(a:  in integer) return std_logic_vector;
 	
 	function pow(b : integer; e : integer) return integer;
-<<<<<<< HEAD
 	function modulo(a: std_logic_vector(7 downto 0); b: std_logic_vector(7 downto 0)) return std_logic;
 	
-=======
-	function modulo(a: std_logic_vector(7 downto 0); b: std_logic_vector(7 downto 0)) return std_logic_vector;
-	function mdc (a: std_logic_vector(7 downto 0); b: std_logic_vector(7 downto 0)) return std_logic_vector;
->>>>>>> 33cf496567b32035f688895a19bf4a2c412cb4db
 END arith;
 
 PACKAGE BODY arith IS
@@ -183,7 +178,7 @@ begin
 end div;
 
 -- Verificar se está funcionando
-function modulo(a: std_logic_vector(7 downto 0); b: std_logic_vector(7 downto 0)) return std_logic_vector is 
+function modulo(a: std_logic_vector(7 downto 0); b: std_logic_vector(7 downto 0)) return std_logic is 
 variable vq, vr : std_logic_vector (7 downto 0);
 variable quoc, resto : std_logic;
 begin
@@ -204,7 +199,7 @@ begin
 	end loop;
 	vq := deslocador_esquerda_1bit (vq);
 	vq(0) := resto;
-	return vr;
+	return resto;
 end modulo;
 
 function conv_int_bin(a:  in integer) return std_logic_vector is

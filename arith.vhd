@@ -10,9 +10,7 @@ PACKAGE arith IS
 	
 	function inc(a: in std_logic_vector(7 downto 0)) return std_logic_vector;
 	function dec(a: in std_logic_vector(7 downto 0)) return std_logic_vector;
-	function conv_bin_int(a:  in std_logic_vector(7 downto 0)) return integer;
-	function conv_int_bin(a:  in integer) return std_logic_vector;
-	
+
 	function pow(b : integer; e : integer) return integer;
 	function modulo(a: std_logic_vector(7 downto 0); b: std_logic_vector(7 downto 0)) return std_logic;
 	
@@ -102,11 +100,9 @@ variable aux1 : std_logic_vector (7 downto 0);
 variable aux2 : std_logic_vector (3 downto 0);
 variable vaium : std_logic;
 begin
-	-- inicializacoes
 	aux1 := "00000000";
 	aux2 := a;
 	vaium := '0';
-	-- implementacao do algoritmo
 	for i in 0 to 3 loop
 		aux1 := deslocador8bits( aux1 );
 		vaium := aux2(3);
@@ -140,19 +136,6 @@ begin
 	return p;
 end pow;
 
-function conv_bin_int(a:  in std_logic_vector(7 downto 0)) return integer is
-variable inteiro : integer;
-begin
-	inteiro := 0;
-	for i in 0 to 7 loop
-		if a(i) = '1' then
-			inteiro := inteiro + pow(2, i);
-		end if;
-	end loop;
-	return inteiro;
-end conv_bin_int;
-
--- Verificar se está funcionando
 function div(a: std_logic_vector(7 downto 0); b: std_logic_vector(7 downto 0)) return std_logic_vector is 
 variable vq, vr : std_logic_vector (7 downto 0);
 variable quoc, resto : std_logic;
@@ -177,7 +160,6 @@ begin
 	return vq;
 end div;
 
--- Verificar se está funcionando
 function modulo(a: std_logic_vector(7 downto 0); b: std_logic_vector(7 downto 0)) return std_logic is 
 variable vq, vr : std_logic_vector (7 downto 0);
 variable quoc, resto : std_logic;
@@ -201,20 +183,4 @@ begin
 	vq(0) := resto;
 	return resto;
 end modulo;
-
-function conv_int_bin(a:  in integer) return std_logic_vector is
-begin
-	return "00000000";
---variable aux,count : integer;
---variable aux2 : std_logic_vector(7 downto 0);
---begin
---	count := 0;
---	aux2(count) := modulo(a,2);
---	a := div(a,2);
---	while (a > 2) loop
---		aux2(count) := modulo(a,2);
---		a := div(a,2);
---		count := count + 1;
---	end loop;
-end conv_int_bin;
 END arith;

@@ -12,7 +12,7 @@ PACKAGE arith IS
 	function dec(a: in std_logic_vector(7 downto 0)) return std_logic_vector;
 
 	function pow(b : integer; e : integer) return integer;
-	function modulo(a: std_logic_vector(7 downto 0); b: std_logic_vector(7 downto 0)) return std_logic;
+	function modulo(a: std_logic_vector(7 downto 0); b: std_logic_vector(7 downto 0)) return std_logic_vector;
 	
 END arith;
 
@@ -160,7 +160,7 @@ begin
 	return vq;
 end div;
 
-function modulo(a: std_logic_vector(7 downto 0); b: std_logic_vector(7 downto 0)) return std_logic is 
+function modulo(a: std_logic_vector(7 downto 0); b: std_logic_vector(7 downto 0)) return std_logic_vector is 
 variable vq, vr : std_logic_vector (7 downto 0);
 variable quoc, resto : std_logic;
 begin
@@ -181,6 +181,6 @@ begin
 	end loop;
 	vq := deslocador_esquerda_1bit (vq);
 	vq(0) := resto;
-	return resto;
+	return vr;
 end modulo;
 END arith;

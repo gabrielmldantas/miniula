@@ -41,7 +41,7 @@ begin
 			when opcode_dec => s <= dec(a);
 			when opcode_mdc => s(3 downto 0) <= mdc(a(3 downto 0), b(3 downto 0));
 			when opcode_ghost => s <= "XXXXXXXX";
-			when opcode_pow => s <= "XXXXXXXX";--conv_int_bin(pow(conv_bin_int(a),conv_bin_int(b)));
+			when opcode_pow => s <= pow(a, b(3 downto 0));
 			when opcode_modulo => s <= modulo(a,b);
 			when opcode_and2 => s <= and2(a,b);
 			when opcode_or2 => s <= or2(a,b);

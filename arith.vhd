@@ -1,5 +1,6 @@
 library IEEE;
 use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
 use work.logic.all;
 
 PACKAGE arith IS
@@ -11,7 +12,7 @@ PACKAGE arith IS
 	function inc(a: in std_logic_vector(7 downto 0)) return std_logic_vector;
 	function dec(a: in std_logic_vector(7 downto 0)) return std_logic_vector;
 
-	function pow(b : integer; e : integer) return integer;
+	function pow(b : std_logic_vector(7 downto 0); e : std_logic_vector(3 downto 0)) return std_logic_vector;
 	function modulo(a: std_logic_vector(7 downto 0); b: std_logic_vector(7 downto 0)) return std_logic_vector;
 	function mdc(a: std_logic_vector(7 downto 0); b: std_logic_vector(7 downto 0)) return std_logic_vector;
 	
@@ -138,14 +139,20 @@ begin
 	return sub(a,"00000001");
 end dec;
 
-function pow(b : integer; e : integer) return integer is
+function pow(b : std_logic_vector(7 downto 0); e : std_logic_vector(3 downto 0)) return std_logic_vector is
+variable b_int : integer;
+variable e_int : integer;
 variable p : integer;
 begin
 	p := 1;
-	for i in 1 to e loop
-		p := p * b;
+	b_int := to_integer(unsigned(b));
+	e_int := to_integer(unsigned(e));
+	for i in 1 to 15 loop
+		if (i <= e_int) then 
+			p := p * b_int;
+		end if;
 	end loop;
-	return p;
+	return std_logic_vector(to_unsigned(p, 8));
 end pow;
 
 function div(a: std_logic_vector(7 downto 0); b: std_logic_vector(7 downto 0)) return std_logic_vector is 

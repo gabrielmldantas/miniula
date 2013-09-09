@@ -13,6 +13,7 @@ PACKAGE arith IS
 
 	function pow(b : integer; e : integer) return integer;
 	function modulo(a: std_logic_vector(7 downto 0); b: std_logic_vector(7 downto 0)) return std_logic_vector;
+	function mdc(a: std_logic_vector(7 downto 0); b: std_logic_vector(7 downto 0)) return std_logic_vector;
 	
 END arith;
 
@@ -42,6 +43,17 @@ begin
 	return result;
 end sub;
 
+function sub4(a: std_logic_vector(3 downto 0); b: std_logic_vector(3 downto 0)) return std_logic_vector is
+variable result : std_logic_vector(3 downto 0);
+variable vaium : std_logic;
+begin
+	vaium := '0';
+	for i in 0 to 3 loop
+		result(i) := (a(i) xor b(i) xor vaium);
+		vaium := ( b(i) and result(i) ) or ( b(i) and vaium) or (vaium and result(i) );
+	end loop ;
+	return result;
+end sub4;
 
 function deslocador (x : std_logic_vector (3 downto 0))
 return std_logic_vector is
@@ -183,4 +195,22 @@ begin
 	vq(0) := resto;
 	return vr;
 end modulo;
+
+function mdc(a: std_logic_vector(3 downto 0); b: std_logic_vector(3 downto 0)) return std_logic_vector is
+variable x, y : std_logic_vector(3 downto 0);
+begin
+	x := a;
+	y := b;
+	for i in 0 to 15 loop
+		if (x /= y) then
+			if (x < y) then
+				y := sub4(y, x);
+			else
+				x := sub4(x, y);
+			end if;
+		end if;
+	end loop;
+	return x;
+end mdc;
+
 END arith;

@@ -39,7 +39,7 @@ begin
 			when opcode_mul => s <= mul(a(3 downto 0), b(3 downto 0));
 			when opcode_inc => s <= inc(a);
 			when opcode_dec => s <= dec(a);
-			when opcode_mdc => s <= mdc(a, b);
+			when opcode_mdc => s(3 downto 0) <= mdc(a(3 downto 0), b(3 downto 0));
 			when opcode_ghost => s <= "XXXXXXXX";
 			when opcode_pow => s <= "XXXXXXXX";--conv_int_bin(pow(conv_bin_int(a),conv_bin_int(b)));
 			when opcode_modulo => s <= modulo(a,b);

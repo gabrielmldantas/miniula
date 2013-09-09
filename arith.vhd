@@ -223,7 +223,7 @@ end mdc;
 
 function media(a: std_logic_vector(7 downto 0); b: std_logic_vector(7 downto 0)) return std_logic_vector is 
 begin
-	return div(add(a,b),2);
+	return div(add(a,b),"00000010");
 end media;
 
 END arith;

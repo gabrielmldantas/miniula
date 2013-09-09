@@ -15,6 +15,7 @@ PACKAGE arith IS
 	function pow(b : std_logic_vector(7 downto 0); e : std_logic_vector(3 downto 0)) return std_logic_vector;
 	function modulo(a: std_logic_vector(7 downto 0); b: std_logic_vector(7 downto 0)) return std_logic_vector;
 	function mdc(a: std_logic_vector(7 downto 0); b: std_logic_vector(7 downto 0)) return std_logic_vector;
+	function media(a: std_logic_vector(7 downto 0); b: std_logic_vector(7 downto 0)) return std_logic_vector;
 	
 END arith;
 
@@ -220,4 +221,8 @@ begin
 	return x;
 end mdc;
 
+function media(a: std_logic_vector(7 downto 0); b: std_logic_vector(7 downto 0)) return std_logic_vector is 
+begin
+	return div(add(a,b),2);
+end media;
 END arith;

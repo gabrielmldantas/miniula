@@ -225,4 +225,5 @@ function media(a: std_logic_vector(7 downto 0); b: std_logic_vector(7 downto 0))
 begin
 	return div(add(a,b),2);
 end media;
+
 END arith;

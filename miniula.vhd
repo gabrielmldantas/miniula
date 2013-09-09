@@ -19,7 +19,7 @@ constant opcode_mul : std_logic_vector (3 downto 0) := "0011";
 constant opcode_inc : std_logic_vector (3 downto 0) := "0100";
 constant opcode_dec : std_logic_vector (3 downto 0) := "0101";
 constant opcode_mdc : std_logic_vector (3 downto 0) := "0110";
-constant opcode_ghost : std_logic_vector (3 downto 0) := "0111";
+constant opcode_media : std_logic_vector (3 downto 0) := "0111";
 constant opcode_pow : std_logic_vector (3 downto 0) := "1000";
 constant opcode_modulo : std_logic_vector (3 downto 0) := "1001";
 constant opcode_nand2 : std_logic_vector (3 downto 0) := "1010";
@@ -40,7 +40,7 @@ begin
 			when opcode_inc => s <= inc(a);
 			when opcode_dec => s <= dec(a);
 			when opcode_mdc => s(3 downto 0) <= mdc(a(3 downto 0), b(3 downto 0));
-			when opcode_ghost => s <= "XXXXXXXX";
+			when opcode_media => s <= media(a,b);
 			when opcode_pow => s <= pow(a, b(3 downto 0));
 			when opcode_modulo => s <= modulo(a,b);
 			when opcode_and2 => s <= and2(a,b);

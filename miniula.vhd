@@ -49,7 +49,6 @@ begin
 			when opcode_not2 => s <= not2(a);
 			when opcode_comp => s(0) <= comp(a,b);
 			when opcode_nand2 => s <= nand2(a,b);
-			when others => s <= "ZZZZZZZZ";
 		end case;
 	end process;
 end arch;

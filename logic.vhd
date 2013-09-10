@@ -8,6 +8,7 @@ PACKAGE logic IS
 	function not2(a: std_logic_vector(7 downto 0)) return std_logic_vector;
 	function comp(a: std_logic_vector(7 downto 0); b: std_logic_vector(7 downto 0)) return std_logic;
 	function nand2(a: std_logic_vector(7 downto 0); b: std_logic_vector(7 downto 0)) return std_logic_vector;
+	function is_maior_ou_igual (x : std_logic_vector; y : std_logic_vector) return std_logic;
 END logic;
 
 PACKAGE BODY logic IS
@@ -55,6 +56,19 @@ begin
 		return '0';
 	end if;
 end comp;
+
+function is_maior_ou_igual (x : std_logic_vector; y : std_logic_vector) return std_logic is
+variable s : std_logic_vector (7 downto 0);
+variable vaium : std_logic;
+begin
+	vaium := '0';
+	for i in 0 to 7 loop
+		s(i) := (x(i) xor y(i) xor vaium);
+		vaium := ( y(i) and s(i) ) or ( y(i) and vaium) or (vaium and s(i) ) ;
+	end loop;
+	vaium := not vaium;
+	return vaium;
+end is_maior_ou_igual;
 
 function nand2(a: std_logic_vector(7 downto 0); b: std_logic_vector(7 downto 0)) return std_logic_vector is
 variable c : std_logic_vector(7 downto 0);

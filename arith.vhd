@@ -170,7 +170,7 @@ begin
 		vq(0) := resto;
 		vr := deslocador_esquerda_1bit(vr);
 		vr(0) := quoc;
-		resto := comp(vr, b);
+		resto := is_maior_ou_igual(vr, b);
 		if resto = '1' then
 			vr := sub (vr, b);
 		end if;
